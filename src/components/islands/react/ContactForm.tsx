@@ -19,7 +19,7 @@ const ContactForm: React.FC = () => {
       message
     };
 
-    emailjs.send('service_zu5hrmb', 'template_b22rgtv', templateParams, '-qFHvZCxvKML4Pcwg')
+    emailjs.send('service_zu5hrmb', 'template_b22rgtv', templateParams, 'zLp_13KfUOccBwJ6T')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess(true);
@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
           </span>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="w-full max-w-lg">
+        <form onSubmit={handleSubmit} className="w-full max-w-lg" id='contactForm' name="contact">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
               Name
