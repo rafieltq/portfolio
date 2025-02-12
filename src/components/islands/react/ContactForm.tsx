@@ -19,7 +19,7 @@ const ContactForm: React.FC = () => {
       message
     };
 
-    emailjs.send('service_779o95k', 'template_b22rgtv', templateParams, '-qFHvZCxvKML4Pcwg')
+    emailjs.send('service_zu5hrmb', 'template_b22rgtv', templateParams, '-qFHvZCxvKML4Pcwg')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess(true);
