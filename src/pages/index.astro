@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import yourData from "../content/yourData.ts";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-5xl font-bold">Rafiel Taveras</div>
+    <div class="text-3xl py-3 font-bold">Web developer and Data Scientist</div>
+    <div class="py-2"
+    >
+      <text class="text-lg">
+        <p>Rafiel is a passionate web developer and data scientist with a strong focus on building data driven applications. </p>
+        <p>He specializes in JavaScript and have professional experience working with PHP, Python, Node JS, Docker, React and VUE. </p>
+        <p>He also have experience working with IoT devices and data engineering.</p>
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="/contact"> Contact me!</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">My Work</div>
+  </div>
+
+  {yourData.projects.map((project) => (
+    <>
+      <HorizontalCard
+        title={project.title}
+        img={project.imageSrc}
+        desc={project.para}
+        url={project.url}
+      />
+      <div class="divider my-0"></div>
+    </>
+  ))}
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">Projects i'm part of</div>
+  </div>
+
+  {yourData.projectsParticipations.map((project) => (
+    <>
+      <HorizontalCard
+        title={project.title}
+        img={project.imageSrc}
+        desc={project.para}
+        url={project.url}
+      />
+      <div class="divider my-0"></div>
+    </>
+  ))}
+</BaseLayout>

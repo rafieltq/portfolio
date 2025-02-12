@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import yourData from "../content/yourData.ts";
+---
+
+<BaseLayout title="Work" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">My Work</div>
+  </div>
+
+  {yourData.projects.map((project) => (
+    <>
+      <HorizontalCard
+        title={project.title}
+        img={project.imageSrc}
+        desc={project.para}
+        url={project.url}
+      />
+      <div class="divider my-0"></div>
+    </>
+  ))}
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-5">Projects i'm part of</div>
+  </div>
+
+  {yourData.projectsParticipations.map((project) => (
+    <>
+      <HorizontalCard
+        title={project.title}
+        img={project.imageSrc}
+        desc={project.para}
+        url={project.url}
+      />
+      <div class="divider my-0"></div>
+    </>
+  ))}
+</BaseLayout>

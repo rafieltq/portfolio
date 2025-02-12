@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="flex justify-between items-center mb-4">
+    <div class="text-3xl font-bold">Profile</div>
+    <a 
+      href="https://drive.google.com/file/d/1cFYeLHRBq3zic-JvIO8XnbXPTNWFFnxY/view?usp=sharing"
+      target="_blank"
+    >
+      <button 
+        class="border-2 border-stone-900 hover:bg-stone-300 hover:text-black text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+        type="button"
+      >
+        Download CV
+      </button>
+    </a>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Rafiel is a very passionate and dedicated developer, with a strong focus on the backend and data science. He has a strong background in data science and organization intelligence, and has been working as a developer for the past 2 years. He is a very fast learner and is always looking for new challenges to improve his skills.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Software Engineering"
+      subtitle="September 2024 at Universidad Abierta Para Adultos, Santiago de los Caballeros, Dominican Republic."
+    />
+    <TimeLineElement
+      title="Technician in Data Science and Analitycs"
+      subtitle="September 2020 to August 2023 at Instituto Tecnológico de Las Américas, Boca chica, Dominican Republic."
+    />
+    <TimeLineElement
+      title="Technician in Development and Administration of Software Systems"
+      subtitle="July 2018 to March 2020 at Politécnico Vicene Aquilino Santos, San Francisco de Macorís, Dominican Republic."
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Junior Lead Developer"
+      subtitle="Since July 2022 at Anncar Equipment Parts, Miami, United States"
+    >
+      In charge of a whole e-commerce platform ecosystem, working Postgres, with Symfony, php, Vue and Quasar Framewok.
+      Developing new features and maintaining a relialbe and scalable platform.
+    </TimeLineElement>
+  </div>
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+  </ul> -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>React</li>
+    <li>Vue</li>
+    <li>Quasar</li>
+    <li>Node</li>
+    <li>Docker</li>
+    <li>Php</li>
+    <li>Python</li>
+    <li>Postgres</li>
+  </ul>
+</BaseLayout>
