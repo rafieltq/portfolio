@@ -14,7 +14,18 @@ import adpImage from '../images/adp.jpg';
 import rentsImage from '../images/rents.png';
 import domicountImage from '../images/domicount.png';
 import planificationImage from '../images/planificacionia.png';
+import arsoftware from "../images/arsoftware.png";
 import sdm from '../images/sdm.png';
+
+// skills images
+import python from "../images/python.png"
+import jsIcon from "../images/js.png"
+import nodejsLogo from "../images/nodejs.png"
+import dockerIcon from "../images/docker.svg"
+import vueIcon from "../images/vue.png"
+import reactIcon from "../images/react.png"
+import phpIcon from "../images/php.png"
+
 
 interface Project {
   title: string;
@@ -24,8 +35,9 @@ interface Project {
 }
 
 interface Skill {
-  img: string;
+  img: any;
   para: string;
+  name: string;
 }
 
 interface Social {
@@ -73,8 +85,8 @@ const yourData: YourData = {
       url: "https://www.linkedin.com/posts/rafieltq_hackathonwinners-softwareinnovation-teamsynergy-activity-7136047391438168064-f6rG?utm_source=social_share_send&utm_medium=member_desktop_web",
     },
     {
-      title: "ADP - CENSUS MANAGEMENT",
-      para: "Census management system for the Dominican Professors Assoication on the 07-06 district, San Francisco de Macorís, Dominican Republic.",
+      title: "ADP - Professors data management system",
+      para: "Data management system for the Dominican Professors Assoication on the 07-06 district, San Francisco de Macorís, Dominican Republic.",
       imageSrc: adpImage,
       url: "https://adpsanfrancisco.com.do",
     },
@@ -97,11 +109,17 @@ const yourData: YourData = {
       url: "https://moodlequizgenerator.netlify.app/#/auth/login",
     },
     {
+      title: "AR SOFTWARE",
+      para: "Landing page for offering software services as freelancers, currently working with ODOO CRM, POS and accounting modules with the community edition.",
+      imageSrc: arsoftware,
+      url: "https://ar.taveras.com.do"
+    },
+    {
       title: "More",
       para: "Explore all my open source projects.",
       imageSrc: moreProjectsImage,
       url: "https://github.com/rafieltq",
-    },
+    }
   ],
 
   projectsParticipations: [
@@ -150,32 +168,39 @@ const yourData: YourData = {
   // Skills Section ---------------
   skills: [
     {
-      img: "pyIcon",
+      img: python,
       para: "Experience in data analysis with pandas and matplotLib, data visualization and data pipeline devlopment with airflow.",
+      name: "python"
     },
     {
-      img: "jsIcon",
+      img: jsIcon,
       para: "Extensive knowledge in the foundations of the language and different frameworks.",
+      name: "Javascript"
     },
     {
-      img: "nodejsLogo",
+      img: nodejsLogo,
       para: "Experience in creating restful APIs using Node Js, Express, Sequelize among other server-side tools.",
+      name: "NodeJs"
     },
     {
-      img: "dockerIcon",
+      img: dockerIcon,
       para: "Extensive professional experience with Docker, traefik and more.",
+      name: "Docker"
     },
     {
-      img: "vueIcon",
+      img: vueIcon,
       para: "Experience with Vue building multi-purpose web applications and mobile APPs, Vuex, Vue router, Quasar Framework and much more.",
+      name: "Vue"
     },
     {
-      img: "reactIcon",
+      img: reactIcon,
       para: "Professional experience working with React, redux, NextJS, and many more tools of the react ecosystem.",
+      name: "React"
     },
     {
-      img: "designIcon",
-      para: "Knowledge of graphic interface design and user experience, prototyping with Figma.",
+      img: phpIcon,
+      para: 'Proffesional experience working with PHP POO with Symfony PHP',
+      name: "PHP"
     }
   ],
 
