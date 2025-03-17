@@ -3,7 +3,6 @@ import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
 const { sideBarActiveItemID } = Astro.props;
-import profile from "../images/profile.webp";
 ---
 
 <div class="drawer-side z-40">
@@ -13,7 +12,7 @@ import profile from "../images/profile.webp";
       <a href="/">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
           <div class="w-[15rem]">
-            <Image class="mask mask-circle" format="webp" width={300} height={300} src={profile} alt="Rafiel Taveras's Profile" />
+            <Image class="mask mask-circle" format="webp" width={300} height={300} src="https://avatars.githubusercontent.com/u/44907530?s=400&u=5b4b779fbc3371c397f7a923564ffca9493048b8&v=4" alt="Rafiel Taveras's Profile" />
           </div>
         </div>
       </a>
