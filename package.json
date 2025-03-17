@@ -9,8 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "postinstall": "pnpm rebuild sharp"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.3",
